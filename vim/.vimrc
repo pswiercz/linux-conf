@@ -27,29 +27,34 @@ set encoding=utf-8
 "split navigations
 noremap <Space> <Nop>
 
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
+nnoremap <C-j> <C-W><C-J>
+nnoremap <C-k> <C-W><C-K>
+nnoremap <C-l> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-
-
-autocmd FileType python map <buffer> <C-@> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <C-@> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python map <buffer> <C-B> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <C-B> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
 map <F1> :w <CR> :source ~/.vimrc<CR>
 map <F2> :NERDTreeToggle<CR>
 
+"inoremap <C-(> ()<ESC>
+
+inoremap ( ()<ESC>ha
+inoremap [ []<ESC>ha
+inoremap { {}<ESC>ha
+inoremap " ""<ESC>ha
+inoremap ' ''<ESC>ha
 
 "map <C-@> :echo 'date ' . strftime('%c')<CR>
 
 "noremap   <silent> cc      :s,^\(\s*\)[^# \t]\@=,\1# ,e<CR>:nohls<CR>zvj
 "noremap   <silent> cu      :s,^\(\s*\)# \s\@!,\1,e<CR>:nohls<CR>zvj
 
-noremap   <buffer> K      :s,^\(\s*\)[^# \t]\@=,\1#,e<CR>:nohls<CR>zvj
-noremap   <buffer> <C-K>  :s,^\(\s*\)#\s\@!,\1,e<CR>:nohls<CR>zvj
+"noremap   <buffer> K      :s,^\(\s*\)[^# \t]\@=,\1#,e<CR>:nohls<CR>zvj
+"noremap   <buffer> <C-K>  :s,^\(\s*\)#\s\@!,\1,e<CR>:nohls<CR>zvj
 
-set colorcolumn =120
+set colorcolumn =170
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 
@@ -60,7 +65,7 @@ Plug 'vim-utils/vim-man'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-dispatch'
 Plug 'gruvbox-community/gruvbox'
-Plug 'davidhalter/jedi-vim'
+Plug 'preservim/nerdcommenter'
 Plug 'tomasr/molokai'
 Plug 'preservim/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -71,22 +76,24 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
-
+"Plug 'kiteco/vim-plugin'    
 "Plug 'vim-scripts/Conque-GDB'
 
 
 call plug#end()
 
-"let g:gruvbox_contrast_dark = 'medium'
-set termguicolors
-colorscheme ghostshell 
-"set background=dark
-
+let g:gruvbox_contrast_dark = 'medium'
+colorscheme gruvbox 
 
 set guicursor=n-v-c:block
 set guicursor+=i-ci-ve:block-blinkwait175-blinkon250-blinkoff150
 
+"let g:kite_tab_complete=1
+set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
+set laststatus=2  " always display the status line
 
+
+let g:NERDTreeWinPos = "right"
 
 "call togglebg#map("<F5>")
 "imap <F5> <Esc>:w<CR>:!clear;python3 %<CR>

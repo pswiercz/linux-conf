@@ -1,0 +1,6 @@
+Default foreground color #918980
+Default background color #262626
+Default link color #337b5b
+Default visited link color #be712c
+Default active link color #bf1515
+Default selection color #d4cbb4

@@ -28,7 +28,7 @@ set splitbelow
 set splitright
 
 set nonu
-set relativenumber
+set relativenumber number
 
 set encoding=utf-8
 

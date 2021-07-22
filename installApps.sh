@@ -1,4 +1,4 @@
-aptNames=(htop vim git ffmeg mlocate curl npm)
+aptNames=(htop vim git ffmeg mlocate curl npm adb wmctrl)
 aptgetNames=(ubuntu-restricted-extras)
 snapNames=(spotify)
 

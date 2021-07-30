@@ -1,5 +1,5 @@
 aptNames=(htop vim git ffmeg mlocate curl npm adb wmctrl)
-aptgetNames=(ubuntu-restricted-extras)
+aptgetNames=(ubuntu-restricted-extras vim-gtk)
 snapNames=(spotify)
 
 sudo apt upgrade -y

@@ -8,6 +8,7 @@ let python_highlight_all=1
 syntax on
 
 let mapleader=" "
+set clipboard^=unnamed
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4

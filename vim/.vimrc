@@ -42,28 +42,27 @@ nnoremap <C-k> <C-W><C-K>
 nnoremap <C-l> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-autocmd FileType python map <buffer> <C-B> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <C-B> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z 
+
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
 
 map <F1> :w <CR> :source ~/.vimrc<CR>
 map <F2> :NERDTreeToggle<CR>
+let @c='^v$yiconsole.log(''A: '', pA);jddk'
 
 "inoremap <C-(> ()<ESC>
 
-inoremap ( ()<ESC>ha
-inoremap [ []<ESC>ha
-inoremap { {}<ESC>ha
-inoremap " ""<ESC>ha
-inoremap ' ''<ESC>ha
-"inoremap < <><ESC>ha
+"inoremap ( ()<ESC>ha
+"inoremap [ []<ESC>ha
+"inoremap { {}<ESC>ha
+"inoremap " ""<ESC>ha
+"inoremap ' ''<ESC>ha
+""inoremap < <><ESC>ha
 
-"map <C-@> :echo 'date ' . strftime('%c')<CR>
 
-"noremap   <silent> cc      :s,^\(\s*\)[^# \t]\@=,\1# ,e<CR>:nohls<CR>zvj
-"noremap   <silent> cu      :s,^\(\s*\)# \s\@!,\1,e<CR>:nohls<CR>zvj
-
-"noremap   <buffer> K      :s,^\(\s*\)[^# \t]\@=,\1#,e<CR>:nohls<CR>zvj
-"noremap   <buffer> <C-K>  :s,^\(\s*\)#\s\@!,\1,e<CR>:nohls<CR>zvj
 
 set colorcolumn =170
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -133,8 +132,3 @@ nnoremap <C-t> :call Toggle_transparent()<CR>
 
 "call Toggle_transparent()
 "echom t:is_transparent
-
-
-
-
-

@@ -118,3 +118,11 @@ fi
 
 alias editior=vim
 alias ll='LC_COLLATE=C ls -lAh --group-directories-first --color=auto'
+alias "c=xclip"
+alias "cc=xclip -selection clipboard"
+alias "v=xclip -o"
+
+export PATH=/home/thicksheaf/web/babylonjs/tafira/367_a/models/server_archive/mongodb-linux-x86_64-ubuntu2004-5.0.2/bin:$PATH
+export PATH=/home/thicksheaf/bin:$PATH
+
+alias ..='cd ..'

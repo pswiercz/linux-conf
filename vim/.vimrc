@@ -46,10 +46,13 @@ nnoremap <C-l> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 
+
+inoremap <esc> <esc><esc>
 "nnoremap <M-j> i 
 "move between tabs using alt l and h
 execute "set <M-l>=\el"
 nnoremap <M-l> gt 
+"nnoremap <M-l> gt 
 execute "set <M-h>=\eh"
 nnoremap <M-h> gT 
 

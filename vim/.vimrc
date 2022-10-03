@@ -37,10 +37,21 @@ set encoding=utf-8
 "split navigations
 noremap <Space> <Nop>
 
+"to unlearn this combination
+noremap <C-W><C-W> jk 
+
 nnoremap <C-j> <C-W><C-J>
 nnoremap <C-k> <C-W><C-K>
 nnoremap <C-l> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+
+"nnoremap <M-j> i 
+"move between tabs using alt l and h
+execute "set <M-l>=\el"
+nnoremap <M-l> gt 
+execute "set <M-h>=\eh"
+nnoremap <M-h> gT 
 
 nnoremap n nzzzv
 nnoremap N Nzzzv
@@ -48,9 +59,10 @@ nnoremap J mzJ`z
 
 inoremap , ,<c-g>u
 inoremap . .<c-g>u
+xnoremap("<leader>p", "\"_dP)
 
 map <F1> :w <CR> :source ~/.vimrc<CR>
-map <F2> :NERDTreeToggle<CR>
+map <Space>n :NERDTreeToggle<CR>
 let @c='^v$yiconsole.log(''A: '', pA);jddk'
 
 "inoremap <C-(> ()<ESC>
@@ -86,6 +98,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
+Plug 'tpope/vim-surround'
 "Plug 'kiteco/vim-plugin'    
 "Plug 'vim-scripts/Conque-GDB'
 

@@ -92,6 +92,10 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias ..='cd ..'
+
+alias chromium-unsafe='chromium --user-data-dir=/tmp/foo --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=https://localhost:8001'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -115,14 +119,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-alias editior=vim
-alias ll='LC_COLLATE=C ls -lAh --group-directories-first --color=auto'
-alias "c=xclip"
-alias "cc=xclip -selection clipboard"
-alias "v=xclip -o"
-
-export PATH=/home/thicksheaf/web/babylonjs/tafira/367_a/models/server_archive/mongodb-linux-x86_64-ubuntu2004-5.0.2/bin:$PATH
-export PATH=/home/thicksheaf/bin:$PATH
-
-alias ..='cd ..'

@@ -19,10 +19,3 @@ sudo snap update -y
 for i in "${snapNames[@]}"; do
 	sudo snap install -y "$i"
 done
-
-
-sudo update-alternatives --config editor
-
-git config --global user.email "p.swiercz@student.uw.edu.pl"
-git config --global user.name "pswiercz"
-

@@ -1,1 +1,1 @@
-sudo cp .bashrc ~/bashrc.
+sudo cp .bashrc ~/.bashrc

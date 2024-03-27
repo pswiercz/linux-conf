@@ -4,7 +4,6 @@ vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 -- console log line
 vim.keymap.set('n', '<leader>cl', '^v$yiconsole.log("A: ", pA);jddk')
 
-
 -- delete in visual blck 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 -- delete in visual to black hole 
@@ -18,6 +17,8 @@ vim.keymap.set('n', '<C-k>', '<C-W><C-K>')
 vim.keymap.set('n', '<C-l>', '<C-W><C-L>')
 vim.keymap.set('n', '<C-h>', '<C-W><C-H>')
 
+vim.keymap.set('n', '<leader>n', vim.cmd.NvimTreeOpen)
 
-vim.keymap.set({'n', 'i', 'v', 'x'}, '<leader>n', vim.cmd.NvimTreeOpen)
+vim.keymap.set('n', '<leader>sr', function() vim.cmd('source $MYVIMRC') end, {noremap = true, silent = true})
+
 

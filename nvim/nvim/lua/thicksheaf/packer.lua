@@ -36,8 +36,47 @@ return require('packer').startup(function(use)
           require('Comment').setup()
       end
   }
+  use "zhenyangze/vim-bitoai"
 
-	use "nvim-tree/nvim-tree.lua"
+ use "nvim-tree/nvim-tree.lua"
 
+  use {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({})
+    end,
+  }
+
+  use "nvim-lua/plenary.nvim"
+
+  use {
+    'CopilotC-Nvim/CopilotChat.nvim',
+    branch = 'canary',
+    requires = {
+      'zbirenbaum/copilot.lua',  -- Dependency for CopilotCha
+      'nvim-lua/plenary.nvim'    -- Dependency for various utilities
+    },
+    config = function()
+      require("CopilotChat").setup({
+        debug = true,  -- Enable debugging
+        temperature = 0.3,
+        window = {
+          layout = 'horizontal'
+        },
+        mappings = {
+          reset = {
+            normal ='<C-r>',
+            insert = '<C-r>'
+          },
+        }
+      })
+    end,
+  }
+
+  
 end)
+
+
 
